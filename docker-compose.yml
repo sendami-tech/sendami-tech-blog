@@ -1,0 +1,12 @@
+version: 'latest'
+services:
+  react-ui:
+    build:
+      context: ./
+    ports:
+      - "3000:3000"
+    container_name: sendami-tech-blog
+    stdin_open: true
+    volumes:
+      - ./:/sendami-tech-blog
+      - /node-modules    
