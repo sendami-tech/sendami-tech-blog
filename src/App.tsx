@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          UNDER CONSTRUCTION
+          UNDER CONSTRUCTION - SENDAMI.TECH PORTFOLIO
         </p>
       </header>
     </div>
