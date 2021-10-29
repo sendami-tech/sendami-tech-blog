@@ -1,16 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Blog from './components/Blog';
+import Home from './components/Home';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          UNDER CONSTRUCTION - SENDAMI.TECH PORTFOLIO
-        </p>
-      </header>
-    </div>
+  <main>
+    <NavBar />
+    <About />
+    <Blog />
+    <Home />
+  </main>
   );
 }
 
