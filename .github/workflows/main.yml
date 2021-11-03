@@ -27,13 +27,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: yarn install
+      - run: npm install
         env:
             NPM_REGISTRY_URL: 'https://registry.npmjs.org'
             NPM_CONFIG_USERCONFIG: '~/.npmrc_senda'      
 
-      - run: yarn build
-      - run: yarn test
+      - run: npm run build
+      - run: npm run test
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
