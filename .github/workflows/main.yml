@@ -26,11 +26,13 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - run: npm ci
         env:
             NPM_REGISTRY_URL: 'https://registry.npmjs.org'
             NPM_CONFIG_USERCONFIG: '~/.npmrc_senda'      
 
+      - run: npm run test
       - run: npm run build
 
       - name: Deploy
