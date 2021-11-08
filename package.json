@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "docker:build": "docker-compose build --no-cache",
-    "docker:run": "docker-compose up"
+    "docker:run": "docker-compose up -d"
   },
   "eslintConfig": {
     "extends": [

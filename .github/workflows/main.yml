@@ -32,8 +32,8 @@ jobs:
             NPM_REGISTRY_URL: 'https://registry.npmjs.org'
             NPM_CONFIG_USERCONFIG: '~/.npmrc_senda'      
 
-      - run: npm run build
-      - run: npm run test
+      - run: npm build
+      - run: npm test
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
