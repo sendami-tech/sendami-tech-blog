@@ -35,4 +35,4 @@ jobs:
       - run: npm test
 
       - name: Deploy
-        run: npm run deploy
+        run: git config --global user.email "sendami.tech@gmail.com" & git config --global user.name "sendami-tech" & npm run deploy
