@@ -34,10 +34,6 @@ jobs:
       - run: npm build
       - run: npm test
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build
-          cname: sendami.tech
+      - name: Run deploy script
+        run: | 
+          git config user.name "sendami-tech" && git config user.email "sendami.tech@gmail.com" & npm run deploy
