@@ -35,4 +35,4 @@ jobs:
       - run: npm test
 
       - name: Deploy
-        run: git config --global user.email "sendami.tech@gmail.com" & git config --global user.name "sendami-tech" & git remote set-url https://sendami-tech:${{ secrets.SECRET_TOKEN }}@github.com/sendami-tech/sendami-tech-blog.git & npm run deploy
+        run: git remote set-url https://${{ github.actor }}:${{ secrets.SECRET_TOKEN }}@github.com/${{ github.actor }}/sendami-tech-blog.git & npm run deploy
