@@ -1,18 +1,13 @@
 import React from 'react';
 import NavBar from './components/NavBar';
-import About from './components/About';
-import Blog from './components/Blog';
-import Home from './components/Home';
 
 import './App.css';
 
 function App() {
   return (
-  <main>
+  <main className="text-gray-400 bg-gray-900 body-font">
+    <h1>UNDER CONSTRUCTION</h1>
     <NavBar />
-    <About />
-    <Blog />
-    <Home />
   </main>
   );
 }

@@ -18,7 +18,11 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "gh-pages": "latest"
+    "@heroicons/react": "^1.0.5",
+    "autoprefixer": "^10.4.0",
+    "gh-pages": "latest",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,9 +30,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "cp CNAME ./build/CNAME & gh-pages -d build",
-    "docker:build": "docker-compose build --no-cache",
-    "docker:run": "docker-compose up -d"
+    "deploy": "gh-pages -d build",
+    "docker:build": "COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --no-cache",
+    "docker:run": "docker-compose up -d & docker-compose exec react-ui sh"
   },
   "eslintConfig": {
     "extends": [

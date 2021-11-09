@@ -1,7 +1,12 @@
 import { Component } from 'react';
+import Contact from './Contact';
 
 export default class Home extends Component {
 	render() {
-		return <h1>Under Construction</h1>
+		return <section id="Home">
+			<div>
+				<Contact/>
+			</div>
+		</section>
 	}
 }
